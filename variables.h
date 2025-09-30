@@ -1,3 +1,6 @@
+#ifndef VARIABLES_H
+#define VARIABLES_H
+
 #define RED "\033[1;31m"
 #define GREEN "\033[1;32m"
 #define BLUE "\033[1;34m"
@@ -23,9 +26,7 @@ typedef struct
 {
     int CategorieID;
     char Categorie_Nom[MAX_LENTGH];
-}Categories_struct;
-
-
+} Categories_struct;
 
 typedef struct
 {
@@ -37,4 +38,9 @@ typedef struct
     char Product_Description[MAX_LENTGH];
 } Product_Struct;
 
+// Extern declarations for global variables
+extern Client_Profile client[CLIENT_MAX];
+extern Categories_struct Categorie[];
+extern Product_Struct Product[PRODUCT_MAX];
 
+#endif // VARIABLES_H
