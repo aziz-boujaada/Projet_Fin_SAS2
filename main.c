@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "variables.h"
+#include "header.h"
 
 int main()
 {
@@ -24,6 +25,7 @@ int main()
         switch (menu_choice)
         {
         case 1:
+            Gestion_Profil_Menu();
             break;
 
         case 2:
