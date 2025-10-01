@@ -14,7 +14,7 @@
 #define PRODUCT_MAX 10
 
 
-extern int Profile_exsit  ;
+extern int Profile_exisit  ;
 typedef struct
 {
     int Client_Id;

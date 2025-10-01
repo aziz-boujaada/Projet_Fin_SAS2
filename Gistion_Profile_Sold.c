@@ -54,7 +54,7 @@ void Gestion_Sold()
         case 1:
         Consultation_Sold(id);
         break;
-        if (Profile_exsit == 0)
+        if (Profile_exisit == 0)
         {
             printf(RED "creer un profile d abord !!\n" RESET);
             return 0;

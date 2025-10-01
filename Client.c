@@ -30,7 +30,7 @@ int Ajouter_Profil(int id){
     client[id].Sold = 500 ;
     printf(GREEN "Le profil a ete ajoute avec succes \n" RESET);
 
-    Profile_exsit = 1;
+    Profile_exisit = 1;
     printf("--------------------------------------------------\n");
 
 }
@@ -39,10 +39,10 @@ int Modification_Profil(int id){
 
      printf("------------------- Midifeier ----------------------\n");
     
-    printf("enter nue nouvelle nom (Acctuell %s) :"  , client[id].Nom);
+    printf("enter nue nouvelle nom (Actuel %s) :"  , client[id].Nom);
     scanf(" %[^\n]" , client[id].Nom);
 
-    printf("enter nue nouvelle nom (Acctuell %s) :"  , client[id].Prenom);
+    printf("enter nue nouvelle nom (Actuel %s) :"  , client[id].Prenom);
     scanf(" %[^\n]" , client[id].Prenom);
 
     Generate_Email(id);
