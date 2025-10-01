@@ -5,6 +5,7 @@ int depo_Sold;
 int List_Prouits_size = sizeof(Product) / sizeof(Product[0]);
 
 
+
 Client_Profile client[CLIENT_MAX];
 
 Categories_struct Categorie[] = {

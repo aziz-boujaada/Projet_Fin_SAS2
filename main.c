@@ -90,10 +90,6 @@ int main()
 
                     Depot_Argent(id, depo_Sold);
                     break;
-                case 3:
-
-                    // Verification de Sold
-                    break;
 
                 case 0:
                     break;
@@ -107,49 +103,85 @@ int main()
         // sous Menu pour Consultation des produits
         case 3:
             int produits_Choices;
-            do
+
+            printf("==================== Catalogue des Produits ====================\n");
+
+            printf("1- Affichage catalogue  \n");
+            printf("2- Recherche produits \n");
+            printf("3- Tri des produits \n");
+            // printf("4- Détails produit  \n");
+            // printf("0- Return a la Menu Principal \n");
+
+            printf("enter votre choix : ");
+            scanf("%d", &produits_Choices);
+            switch (produits_Choices)
             {
-                printf("==================== Catalogue des Produits ====================\n");
+            case 1:
+                Afficher_Produit();
+                break;
+            case 2:
+                // Recherche produits
+                int recherch_choice;
 
-                printf("1- Affichage catalogue  \n");
-                printf("2- Recherche produits \n");
-                // printf("3- Tri des produits \n");
-                // printf("4- Détails produit  \n");
-                // printf("0- Return a la Menu Principal \n");
+                printf("==================== Rechercher pour Produits ====================\n");
 
-                printf("enter votre choix : ");
-                scanf("%d", &produits_Choices);
-                switch (produits_Choices)
+                printf("1- Rechercher par Nom \n");
+                printf("2- Recherche Par Categorie \n");
+                printf("0- Return a menu principal \n");
+
+                printf("enter Votre choix  :");
+                scanf("%d", &recherch_choice);
+
+                switch (recherch_choice)
                 {
                 case 1:
-                    Afficher_Produit(id);
+                    char Search_Nom[100];
+                    printf("--------- Rechercher par Nom ----------- \n");
+                    printf("enter Nom de Produit pour recherch :");
+                    scanf(" %[^\n]", Search_Nom);
+                    Recherch_Par_Nom(Search_Nom);
                     break;
                 case 2:
-                    // Recherche produits
-                    int recherch_choice;
-                    do
-                    {
-                        printf("==================== Rechercher pour Produits ====================\n");
-
-                        printf("1- Rechercher par Nom \n");
-                        printf("2- Recherche Par Categorie \n");
-                        printf("0- Return a menu principal \n");
-                        switch (recherch_choice)
-                        {
-                            case 1 : 
-                            
-                            break;
-                        }
-                    } while (recherch_choice != 0);
-                    break;
-                case 3:
-                    // RTri des produits
-                    break;
-                case 4:
-                    // Détails produi
+                    char Search_categorie[100];
+                    printf("--------- Rechercher par Categorie ----------- \n");
+                    printf("enter Categories de Produit pour recherch :");
+                    scanf(" %[^\n]", Search_categorie);
+                    Recherch_Par_Categoire(Search_categorie);
                     break;
                 }
-            } while (produits_Choices > 1);
+
+                break;
+            case 3:
+                // RTri des produits
+                int Tri_choice;
+
+                printf("==================== Trier les Produit ====================\n");
+
+                printf("1- trier par prix \n");
+                printf("2- trier par Nom \n");
+                printf("0- Return a menu principal \n");
+
+                printf("enter Votre choix  :");
+                scanf("%d", &Tri_choice);
+
+                switch(Tri_choice)
+                {
+                    case 1 : 
+                    Tri_Par_Prix();
+                    Afficher_Produit();
+                    break;
+
+                    case 2 : 
+                    Tri_Par_Nom();
+                    Afficher_Produit();
+                    break;
+                }
+                break;
+            case 4:
+                // Détails produi
+                break;
+            }
+
             break;
         }
     } while (menu_choice != 0);

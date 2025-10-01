@@ -18,6 +18,8 @@ extern int Is_Profile_exsit  ;
 extern int id ;
 extern int depo_Sold;
 extern int List_Prouits_size;
+
+
 typedef struct
 {
     int Client_Id;
