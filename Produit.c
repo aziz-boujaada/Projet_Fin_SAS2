@@ -64,13 +64,14 @@ void Recherch_Par_Nom(char Search_Nom[100])
  Tri_Par_Nom();
 
   int start = 0, end = List_Prouits_size - 1, mill;
-  bool trouver = false;
+  int trouver = 0;
+
   while (start <= end)
   {
     mill = (start + end) / 2;
     if (strcasecmp(Product[mill].Product_Name, Search_Nom) == 0)
     {
-      trouver = true;
+      trouver = 1;
       printf("---------------- Produit Trouver ----------------------\n");
       printf("Produit ID : %d\n", Product[mill].Product_ID);
       printf("Produit Nom : %s\n", Product[mill].Product_Name);
@@ -78,6 +79,7 @@ void Recherch_Par_Nom(char Search_Nom[100])
       printf("Produit Prix : %.2f\n", Product[mill].Product_Prix);
       printf("Produit Stock : %d\n", Product[mill].Product_Stock);
       printf("Produit Description : %s\n", Product[mill].Product_Description);
+      break;
     }
     else if (strcasecmp(Product[mill].Product_Name, Search_Nom) > 0)
     {
@@ -94,6 +96,8 @@ void Recherch_Par_Nom(char Search_Nom[100])
     printf(RED "Pas d produit avec cet Nom" RESET);
   }
 }
+
+
 
 void Recherch_Par_Categoire(char Search_categorie[100])
 {
@@ -117,3 +121,5 @@ void Recherch_Par_Categoire(char Search_categorie[100])
     }
   }
 }
+
+

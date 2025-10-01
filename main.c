@@ -164,25 +164,51 @@ int main()
                 printf("enter Votre choix  :");
                 scanf("%d", &Tri_choice);
 
-                switch(Tri_choice)
+                switch (Tri_choice)
                 {
-                    case 1 : 
+                case 1:
                     Tri_Par_Prix();
                     Afficher_Produit();
                     break;
 
-                    case 2 : 
+                case 2:
                     Tri_Par_Nom();
                     Afficher_Produit();
                     break;
                 }
                 break;
-            case 4:
-                // Détails produi
-                break;
             }
 
             break;
+        case 4:
+
+            int Achat_choice;
+
+            printf("==================== Effectuer un achat ====================\n");
+
+            printf("1- Slection de produit \n");
+            printf("2- Verifications \n");
+            printf("0- Return a menu principal \n");
+
+            printf("enter Votre choix  :");
+            scanf("%d", &Achat_choice);
+
+            switch (Achat_choice)
+            {
+            case 1:
+                int Select_Id;
+                printf("enter une Id pour select une produit :");
+                scanf("%d", &Select_Id);
+                Selection_Produit(Select_Id);
+                break;
+            case 2 :
+            int Select_Id;
+                printf("enter une Id pour select une produit :");
+                scanf("%d", &Select_Id);
+                Achat_proccecur(Select_Id);
+            default:
+                break;
+            }
         }
     } while (menu_choice != 0);
 
