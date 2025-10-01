@@ -66,10 +66,10 @@ int Afficher_Profile(int id)
     Check_Profile_Exist();
     printf("------------------- Your Informations ----------------------\n");
     printf("Id: %d\n", client[id].Client_Id);
-    printf("Id: %s\n", client[id].Nom);
-    printf("Id: %s\n", client[id].Prenom);
-    printf("Id: %s\n", client[id].Email);
-    printf("Id: %d\n", client[id].Sold);
+    printf("Nom: %s\n", client[id].Nom);
+    printf("Prenom: %s\n", client[id].Prenom);
+    printf("Prix: %s\n", client[id].Email);
+    printf("Sold: %.2f\n", client[id].Sold);
 }
 
 // gestion de sold

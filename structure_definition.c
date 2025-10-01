@@ -1,7 +1,10 @@
 #include "variables.h"
-int Is_Profile_exsit = 0 ;
+int Is_Profile_exsit = 0;
 int id = 0;
 int depo_Sold;
+int List_Prouits_size = sizeof(Product) / sizeof(Product[0]);
+
+
 Client_Profile client[CLIENT_MAX];
 
 Categories_struct Categorie[] = {
@@ -24,4 +27,3 @@ Product_Struct Product[PRODUCT_MAX] = {
 	{1009, "Smartphone Stand", {1, "Electronics"}, 9.99, 180, "Adjustable mobile phone holder"},
 	{1010, "USB-C Cable", {1, "Electronics"}, 5.49, 400, "1m USB-C charging/data cable"},
 };
-

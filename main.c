@@ -5,6 +5,7 @@
 
 int main()
 {
+    // Menu Principal
     int menu_choice;
     do
     {
@@ -24,6 +25,7 @@ int main()
 
         switch (menu_choice)
         {
+            // sous Menu pour Gestion  de profil
         case 1:
             int profil_choices;
             do
@@ -60,6 +62,7 @@ int main()
 
             } while (profil_choices > 3);
             break;
+            // sous Menu pour Gestion  du Solde Virtuel
 
         case 2:
             int Sold_choices;
@@ -85,7 +88,7 @@ int main()
                     printf("enter a montant pur ajouter a votre sold :");
                     scanf("%d", &depo_Sold);
 
-                    Depot_Argent(id ,depo_Sold );
+                    Depot_Argent(id, depo_Sold);
                     break;
                 case 3:
 
@@ -99,6 +102,54 @@ int main()
                 }
 
             } while (Sold_choices > 3);
+            break;
+
+        // sous Menu pour Consultation des produits
+        case 3:
+            int produits_Choices;
+            do
+            {
+                printf("==================== Catalogue des Produits ====================\n");
+
+                printf("1- Affichage catalogue  \n");
+                printf("2- Recherche produits \n");
+                // printf("3- Tri des produits \n");
+                // printf("4- Détails produit  \n");
+                // printf("0- Return a la Menu Principal \n");
+
+                printf("enter votre choix : ");
+                scanf("%d", &produits_Choices);
+                switch (produits_Choices)
+                {
+                case 1:
+                    Afficher_Produit(id);
+                    break;
+                case 2:
+                    // Recherche produits
+                    int recherch_choice;
+                    do
+                    {
+                        printf("==================== Rechercher pour Produits ====================\n");
+
+                        printf("1- Rechercher par Nom \n");
+                        printf("2- Recherche Par Categorie \n");
+                        printf("0- Return a menu principal \n");
+                        switch (recherch_choice)
+                        {
+                            case 1 : 
+                            
+                            break;
+                        }
+                    } while (recherch_choice != 0);
+                    break;
+                case 3:
+                    // RTri des produits
+                    break;
+                case 4:
+                    // Détails produi
+                    break;
+                }
+            } while (produits_Choices > 1);
             break;
         }
     } while (menu_choice != 0);

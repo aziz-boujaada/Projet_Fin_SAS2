@@ -17,13 +17,14 @@
 extern int Is_Profile_exsit  ;
 extern int id ;
 extern int depo_Sold;
+extern int List_Prouits_size;
 typedef struct
 {
     int Client_Id;
     char Nom[MAX_LENTGH];
     char Prenom[MAX_LENTGH];
     char Email[MAX_LENTGH];
-    int Sold;
+    float Sold;
 } Client_Profile;
 
 typedef struct
