@@ -14,14 +14,25 @@
 #define PRODUCT_MAX 10
 
 
-extern int Profile_exisit  ;
+extern int Is_Profile_exsit  ;
+extern int id ;
+extern int depo_Sold;
+extern int List_Prouits_size;
+
+
 typedef struct
 {
     int Client_Id;
     char Nom[MAX_LENTGH];
     char Prenom[MAX_LENTGH];
     char Email[MAX_LENTGH];
-    int Sold;
+    float Sold;
+
+     int Achat_Product_ID;  
+    char Achat_Product_Name[MAX_LENTGH];
+    float Achat_Product_Prix;  
+    int Achat_Quantite;       
+    int nb_achats;  
 } Client_Profile;
 
 typedef struct
@@ -45,4 +56,4 @@ extern Client_Profile client[CLIENT_MAX];
 extern Categories_struct Categorie[];
 extern Product_Struct Product[PRODUCT_MAX];
 
-#endif // VARIABLES_H
+#endif // VARIABLES_H;
