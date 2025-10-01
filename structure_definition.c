@@ -1,5 +1,7 @@
 #include "variables.h"
-int Profile_exsit = 0 ;
+int Is_Profile_exsit = 0 ;
+int id = 0;
+int depo_Sold;
 Client_Profile client[CLIENT_MAX];
 
 Categories_struct Categorie[] = {
