@@ -4,7 +4,7 @@
 #include "header.h"
 
 
-
+// gestion de profile
 int Generate_Email(int id){
     strcpy(client[id].Email , client[id].Nom);
     strcat(client[id].Email , ".");
@@ -12,6 +12,8 @@ int Generate_Email(int id){
     strcat(client[id].Email , "@gmail.com");
 }
 int Ajouter_Profil(int id){
+
+    
 
     printf("------------------- Ajouter ----------------------\n");
     
@@ -27,6 +29,8 @@ int Ajouter_Profil(int id){
    
     client[id].Sold = 500 ;
     printf(GREEN "Le profil a ete ajoute avec succes \n" RESET);
+
+    Profile_exsit = 1;
     printf("--------------------------------------------------\n");
 
 }
@@ -53,4 +57,18 @@ int Afficher_Profile(int id){
     printf("Id: %s\n" , client[id].Prenom );
     printf("Id: %s\n" , client[id].Email );
     printf("Id: %d\n" , client[id].Sold);
+}
+
+// gestion de sold 
+
+int Consultation_Sold(int id){
+
+   
+printf("-------------------------- Consultation_Sold ----------------------\n");
+
+if(client[id].Sold > 0){
+    printf(GREEN"Votre solde est : %d\n" RESET  , client[id].Sold);
+}else{
+    printf(RED"votre sold epuise\n"RESET);
+}
 }

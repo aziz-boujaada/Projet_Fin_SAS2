@@ -13,6 +13,8 @@
 #define CLIENT_MAX 1
 #define PRODUCT_MAX 10
 
+
+extern int Profile_exsit  ;
 typedef struct
 {
     int Client_Id;

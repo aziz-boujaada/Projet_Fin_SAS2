@@ -29,6 +29,7 @@ int main()
             break;
 
         case 2:
+            Gestion_Sold();
             break;
         }
     } while (menu_choice != 0);
