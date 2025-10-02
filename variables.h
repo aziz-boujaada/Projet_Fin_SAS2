@@ -18,7 +18,7 @@ extern int Is_Profile_exsit  ;
 extern int id ;
 extern int depo_Sold;
 extern int List_Prouits_size;
-
+extern float total_invissment;
 
 typedef struct
 {
@@ -28,11 +28,6 @@ typedef struct
     char Email[MAX_LENTGH];
     float Sold;
 
-     int Achat_Product_ID;  
-    char Achat_Product_Name[MAX_LENTGH];
-    float Achat_Product_Prix;  
-    int Achat_Quantite;       
-    int nb_achats;  
 } Client_Profile;
 
 typedef struct
@@ -49,6 +44,7 @@ typedef struct
     float Product_Prix;
     int Product_Stock;
     char Product_Description[MAX_LENTGH];
+    int nbr_achat;
 } Product_Struct;
 
 // Extern declarations for global variables

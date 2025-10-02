@@ -5,11 +5,7 @@
 #include "header.h"
 void Tri_Par_Nom();
 
-// void Sub_String(int id){
-// while(client[id].Nom != '\0'){
 
-//}
-//}
 
 void Afficher_Produit()
 {
@@ -28,7 +24,7 @@ void Tri_Par_Prix()
 
   for (int i = 0; i < List_Prouits_size; i++)
   {
-    for (int j = 0; j < List_Prouits_size - i; j++)
+    for (int j = 0; j < List_Prouits_size - i - 1; j++)
     {
 
       if (Product[j].Product_Prix > Product[j + 1].Product_Prix)
@@ -45,7 +41,7 @@ void Tri_Par_Nom()
 
   for (int i = 0; i < List_Prouits_size; i++)
   {
-    for (int j = 0; j < List_Prouits_size - i; j++)
+    for (int j = 0; j < List_Prouits_size - i - 1; j++)
     {
 
       if (strcasecmp(Product[j].Product_Name, Product[j + 1].Product_Name) > 0)

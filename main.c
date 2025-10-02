@@ -17,7 +17,7 @@ int main()
         printf(BLUE "2-Gestion du solde virtuel\n" RESET);
         printf(BLUE "3-Consultation des produit\n" RESET);
         printf(BLUE "4-Effectuer un achat\n" RESET);
-        printf(BLUE "5-Gestion du profil client\n" RESET);
+        printf(BLUE "5-Statistics\n"RESET);
         printf(BLUE "0-Quitter l'application\n" RESET);
 
         printf(CYAN "Enter Votre Choix : " RESET);
@@ -75,7 +75,6 @@ int main()
 
                 printf("1- Consultation du solde \n");
                 printf("2- Depot d'argent \n");
-                printf("3- Verification de Sold \n");
                 printf("0- Return a la Menu Principal \n");
 
                 printf("enter votre choix : ");
@@ -213,15 +212,22 @@ int main()
                 break;
             }
             case 2: {
-                int Select_Id;
+                int Select_Id , Quantite;
                 printf("enter une Id pour select une produit :");
                 scanf("%d", &Select_Id);
-                Achat_proccecur(Select_Id);
+
+                printf("enter une Quantite : :");
+                scanf("%d", &Quantite);
+                Achat_proccecur(Select_Id , Quantite);
             }
             default:
                 break;
             }
         }
+        case 5 : 
+        if(!Check_Profile_Exist()) break;
+          statistiques();
+        break;
         }
     } while (menu_choice != 0);
 

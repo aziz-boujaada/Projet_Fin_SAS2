@@ -95,7 +95,10 @@ int Depot_Argent(int id, int depo_Sold)
 {
     if(!Check_Profile_Exist())
     printf("-------------------------- Depot_Sold ----------------------\n");
-
+    if(depo_Sold < 0){
+        printf(RED"sold negative\n"RESET);
+       return 0;
+    }
     client[id].Sold += depo_Sold;
 
     printf(GREEN "Votre solde aprer depot est : %.2f\n" RESET, client[id].Sold);

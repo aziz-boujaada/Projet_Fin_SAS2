@@ -2,6 +2,7 @@
 int Is_Profile_exsit = 0;
 int id = 0;
 int depo_Sold;
+float total_invissment = 0 ;
 int List_Prouits_size = sizeof(Product) / sizeof(Product[0]);
 
 

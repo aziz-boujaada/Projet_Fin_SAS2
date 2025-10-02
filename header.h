@@ -18,4 +18,6 @@ void Tri_Par_Nom();
 
 
 int Selection_Produit(int Select_Id);
-int Achat_proccecur(int Select_Id);
+int Achat_proccecur(int Select_Id , int Quantite);
+
+void statistiques();
